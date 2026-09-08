@@ -415,14 +415,13 @@ section{position:relative;z-index:2;padding:100px 6vw}
 .cert-title{font-weight:600;font-size:.9rem;margin-bottom:4px}
 .cert-org{color:var(--muted);font-size:.78rem}
 .cert-date{color:var(--cyan);font-size:.74rem;margin-top:4px}
-  .certificate-link {
+.certificate-link {
   display: inline-block;
   margin-top: 10px;
   color: var(--cyan);
   text-decoration: none;
   font-size: .75rem;
   font-weight: 600;
-  transition: .2s;
 }
 
 .certificate-link:hover {
@@ -710,7 +709,7 @@ const TIMELINE = [
   },
 ];
 const EDU = [
-  {badge:'pg',label:'PG',degree:'MSc in Data Science',inst:'University Post Graduate College OU, Secunderabad',year:'2024 – Present',gpa:''},
+  {badge:'pg',label:'PG',degree:'MSc in Data Science',inst:'University Post Graduate College OU, Secunderabad',year:'2024 – 2016',gpa:''},
   {badge:'ug',label:'UG',degree:'BSc in Data Science',inst:'Telangana Social Welfare Residential Degree College, Kamareddy',year:'2021 – 2024',gpa:'9.2 GPA'},
   {badge:'inter',label:'12th',degree:'Intermediate',inst:'Telangana State Residential Junior College, Yedapally',year:'2019 – 2021',gpa:'8.9 GPA'},
   {badge:'ssc',label:'10th',degree:'SSC',inst:'Matrusri High School',year:'Completed 2019',gpa:'9.8 GPA'},
@@ -720,32 +719,28 @@ const CERTS = [
     icon:'📊',
     title:'Data Analyst',
     org:'Nirmaan Organisation',
-    date:'Mar 2025',
-    link:'certificates/data-analyst.pdf'
+    date:'Mar 2025'
   },
 
   {
     icon:'🐍',
     title:'Python for Beginners (Python 3)',
     org:'Infosys Springboard',
-    date:'Mar 2024',
-    link:'certificates/python.pdf'
+    date:'Mar 2024'
   },
 
   {
     icon:'🤖',
     title:'AI Skills Passport',
     org:'EY & Microsoft',
-    date:'2024',
-    link:'certificates/ai-skills.pdf'
+    date:'2024'
   },
 
   {
     icon:'📈',
     title:'Power BI for Beginners',
     org:'Simplilearn',
-    date:'May 2026',
-    link:'certificates/power-bi.pdf'
+    date:'May 2026'
   },
 
   {
@@ -836,15 +831,10 @@ CERTS.forEach(c => {
       <div class="cert-title">${c.title}</div>
       <div class="cert-org">${c.org}</div>
       <div class="cert-date">${c.date}</div>
-
-      ${c.link ? `<a href="${c.link}" target="_blank" class="certificate-link">
-        View Certificate →
-      </a>` : ''}
-
+      ${c.link ? `<a href="${c.link}" target="_blank" class="certificate-link">View Certificate →</a>` : ''}
     </div>
   </div>`;
 });
-
 // Contact
 const ccCards = document.getElementById('contact-cards');
 CONTACT_DATA.forEach(c => {
