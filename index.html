@@ -427,7 +427,6 @@ section{position:relative;z-index:2;padding:100px 6vw}
 .certificate-link:hover {
   color: var(--pink);
 }
-
 /* ── CONTACT ──────────────────────────────────────── */
 #contact{background:var(--bg);padding-bottom:130px}
 .contact-inner{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;margin-top:60px}
@@ -719,28 +718,32 @@ const CERTS = [
     icon:'📊',
     title:'Data Analyst',
     org:'Nirmaan Organisation',
-    date:'Mar 2025'
+    date:'Mar 2025',
+    link:'Data%20Analyst.pdf'
   },
 
   {
     icon:'🐍',
     title:'Python for Beginners (Python 3)',
     org:'Infosys Springboard',
-    date:'Mar 2024'
+    date:'Mar 2024',
+    link:'Python%20for%20Beginners%20%28Python%203%29.pdf'
   },
 
   {
     icon:'🤖',
     title:'AI Skills Passport',
     org:'EY & Microsoft',
-    date:'2024'
+    date:'2024',
+    link:'AI%20Skills%20Passport%20.pdf'
   },
 
   {
     icon:'📈',
     title:'Power BI for Beginners',
     org:'Simplilearn',
-    date:'May 2026'
+    date:'May 2026',
+    link:'Power%20BI%20for%20Beginners.pdf'
   },
 
   {
@@ -748,7 +751,7 @@ const CERTS = [
     title:'Introduction to SQL',
     org:'Certificate Code: 10454477',
     date:'11 July 2026',
-    link:'certificates/introduction-to-sql.pdf'
+    link:'Introduction_to_SQL.pdf'
   }
 ];
 const CONTACT_DATA = [
@@ -831,7 +834,10 @@ CERTS.forEach(c => {
       <div class="cert-title">${c.title}</div>
       <div class="cert-org">${c.org}</div>
       <div class="cert-date">${c.date}</div>
-      ${c.link ? `<a href="${c.link}" target="_blank" class="certificate-link">View Certificate →</a>` : ''}
+
+      <a href="${c.link}" target="_blank" class="certificate-link">
+        View Certificate →
+      </a>
     </div>
   </div>`;
 });
